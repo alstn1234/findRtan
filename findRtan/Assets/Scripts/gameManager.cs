@@ -13,6 +13,9 @@ public class gameManager : MonoBehaviour
     public GameObject endText; 
     public GameObject gameOverText;
 
+    public AudioSource audioSource;
+    public AudioClip match;
+
     float time = 30.0f;
 
     public static gameManager I;
@@ -62,6 +65,7 @@ public class gameManager : MonoBehaviour
 
         if (firstCardImage == secondCardImage)
         {
+            audioSource.PlayOneShot(match);
             firstCard.GetComponent<card>().destroyCard();
             secondCard.GetComponent<card>().destroyCard();
 
