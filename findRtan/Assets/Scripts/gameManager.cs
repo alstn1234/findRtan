@@ -16,7 +16,7 @@ public class gameManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip match;
 
-    float time = 30.0f;
+    float time = 40.0f;
 
     public static gameManager I;
     private void Awake()
